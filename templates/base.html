@@ -1,0 +1,30 @@
+{# The way the flask works is that you can directly pass the variables to the html code you are rendering #}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Local Chat App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {# this two sets of curly braces indicates a variable in jenga templating engine #}
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        {# this script tag allows us to use socketio module of js to communicate with backend python web application #}
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" 
+            integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" 
+            crossorigin="anonymous">
+        </script>
+    </head>
+    <body>
+        <div class="content">
+            {# A block is a reusable part of our code that can be overridden #}
+            {% block content %} {% endblock %}
+        </div>
+    </body>
+</html>
