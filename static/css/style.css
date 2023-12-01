@@ -1,72 +1,85 @@
+/* Overall Layout */
 .main-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 400px;
+    margin-bottom: 100px;
 }
 
 .join {
     display: flex;
     flex-direction: row;
     width: 100%;
+    gap: 10px;
 }
 
 .create-button {
     width: 100%;
+    border-radius: 8px; /* Rounded corners for buttons */
+    background-color: #4CAF50; /* Dark green color for button */
+    color: white; /* White text for better visibility */
+    font-family: 'Arial', sans-serif; /* Change font family */
+    font-size: 16px;
 }
 
 .content {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 700px;
-    background-color: aqua;
+    height: 100vh;
+    background-color: #404040; /* Dark grayish color for background */
 }
 
+/* Message Box */
 .message-box {
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-radius: 10px;
-    background-color: whitesmoke;
+    border: 2px solid #696969; /* Dark grayish border color */
+    border-radius: 15px; /* More rounded corners for the message box */
+    background-color: #686868; /* Dark background color */
     height: 80vh;
     width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    overflow: hidden;
 }
 
+/* Messages Section */
 .messages {
-    overflow-y: scroll;
+    overflow-y: auto;
     flex: 1;
     width: 100%;
+    padding: 10px;
 }
 
+/* Input Section */
 .inputs {
     padding: 10px;
     display: flex;
+    align-items: center;
 }
 
-h2 {
-    text-align: center;
-}
-
+/* Message Input */
 #message {
     flex: 1;
+    margin-right: 10px;
+    border-radius: 10px; /* Rounded corners for the input field */
+    padding: 8px; /* Adjusted padding for better appearance */
+    font-family: 'Arial', sans-serif; /* Change font family */
 }
 
-.text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
+/* Styling for Message Timestamp */
 .muted {
     font-size: 10px;
-    color: darkgray;
+    color: #A9A9A9; /* Light gray color for timestamp */
+    margin-top: 5px;
+}
+
+/* Centered Heading */
+h2 {
+    text-align: center;
+    color: white; /* White color for text */
+    font-family: 'Verdana', sans-serif; /* Change font family */
+    margin-bottom: 20px; /* Increased margin for better separation */
 }
